@@ -5,14 +5,13 @@ class Solution {
             freq[ch - 'a']++;
         }
 
-        return Math.min(
-                Math.min(freq['b' - 'a'] , freq['a'-'a']),
-                
-                Math.min(
-                Math.min(freq['l' - 'a']/2 , freq['o'-'a']/2),
-                freq['n'-'a']
-                )
-        );   
+        int ans = freq['b' - 'a'];
+        ans = Math.min(ans, freq['a' - 'a']);
+        ans = Math.min(ans, freq['l' - 'a']/2);
+        ans = Math.min(ans, freq['o' - 'a']/2);
+        ans = Math.min(ans, freq['n' - 'a']);
+
+        return ans; 
 
     }
 }
