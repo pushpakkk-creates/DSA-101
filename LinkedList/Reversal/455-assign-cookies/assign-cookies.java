@@ -3,8 +3,8 @@ class Solution {
         Arrays.sort(g);
         Arrays.sort(s);
 
-        int i = 0;
-        int j = 0;
+        int i = 0;   //child
+        int j = 0;   //cookie
 
         while(i < g.length && j < s.length){
             if(s[j] >= g[i]){
