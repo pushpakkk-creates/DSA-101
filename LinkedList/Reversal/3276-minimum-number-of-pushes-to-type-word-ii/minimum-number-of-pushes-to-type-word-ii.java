@@ -7,18 +7,15 @@ class Solution {
         }
 
         Arrays.sort(freq);
-        int push = 0;
-        int count = 0;
-        int cost = 1;
+        int ans = 0;  // Variable to hold the total number of pushes
+        int idx = 0;  // Index to track the position in the sorted array
 
         for(int i = 25; i>=0; i--){
             if(freq[i] == 0) break;
 
-            push += freq[i]*cost;
-            count++;
-
-            if(count % 8 == 0) cost++;
+            ans += freq[i]*((idx / 8) + 1);
+            idx++; 
         }
-        return push;
+        return ans;
     }
 }
